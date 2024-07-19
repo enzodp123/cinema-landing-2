@@ -1,0 +1,158 @@
+/*FONT*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*PALETTING COLORS*/
+:root{
+  --bgcolor : #141414;
+  --bgcontrast:#272727;
+  --bgsecondary:#242424;
+  --primary:#230B4E;
+  --secondary:#340B4E;
+  --neon:#C300DA;
+  --text:#e4e0d8;
+  --placeholder:#5f5f5f;
+  --textContrast:#000000;
+}
+
+/*HTML*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*BODY*/
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template:
+  "b a a a a" 15%
+  "b c c c d" 42.5% 
+  "b c c c e" 42.5% / 17% 0% 25%
+  ;
+  background: var(--bgcolor);
+
+}
+
+/*NAV-BAR NAV_INPUT*/
+.bar-nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  grid-area: a;
+}
+.nav__input{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav__input button{
+  background: var(--bgcontrast);
+  border: none;
+  padding: .2em;
+  border-left: solid var(--bgcolor) 1px;
+  border-radius: 0 10px 10px 0;
+  transition: transform .2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+  .nav__input button:active{
+    transform: scale(1.1);
+    background: var(--bgsecondary);
+  }
+.nav__input button img{
+  width: 27px;
+  align-items: center;
+  cursor: pointer;
+}
+.nav__input input{
+  background: var(--bgcontrast);
+  border: none;
+  border-radius: 10px 0 0 10px;
+  padding: .7em 40px;
+  font-size: .9em;
+  color: var(--text);
+}
+.nav__input input::placeholder{
+  color: var(--placeholder);
+  justify-content: space-between;
+}
+/*NAV__BTN*/
+.btn{
+  background: rgb(39,39,39);
+  background: linear-gradient(-90deg, rgba(39,39,39,1) 50%, rgba(255,255,255,1) 50%);
+  background-position: right;
+  background-size: 200%;
+  background-repeat: no-repeat;
+  padding: 6.9px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-position .8s cubic-bezier(.57,0,.49,.64);
+}
+.btn:hover{
+  background-position: left;
+  &.btn a{
+    color: black;
+  }
+}
+.btn:focus{
+  background-position: left;
+  &.btn a{
+    color: black;
+  }
+}
+.btn a{
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: 500;
+  transition: color .8s cubic-bezier(.57,0,.49,.64);
+}
+/*NAV__PROFILE*/
+.perfil{
+  border-radius: 10px;
+  padding: 0px 3px 0px 20px;
+  display: flex;
+  background: var(--bgcontrast);
+  border: none;
+  align-items: center;
+  cursor: pointer;
+}
+
+.perfil img{
+  background: none;
+  transition: transform .8s cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 32.7px;
+  border-radius: 10px;
+}
+.perfil a{
+  text-align: center;
+  color: var(--text);
+  font-size: 1.2em;
+}
+.perfil:hover{
+  &.perfil img{
+    transform: rotate(90deg);
+  }
+}
+/**/
+.slider {
+  background: red;
+  grid-area: b;
+}
+
+main {
+  grid-area: c;
+  background: whitesmoke;
+}
+
+.lugares {
+  background: yellow;
+  grid-area: d;
+}
+
+.horariros {
+  background: cadetblue;
+  grid-area: e;
+}

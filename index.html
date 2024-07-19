@@ -9,13 +9,18 @@
 <body>
     <!--BARRA DE BUSQUEDA Y NAVEGACION-->
     <header class="bar-nav">
-        <input type="search" name="search" id="srch" placeholder="buscar" src>
-        <button class="btn"><a href="#">Peliculas</a></button>
-        <button class="btn"><a href="#">Series</a></button>
-        <button class="btn"><a href="#">Comedia</a></button>
-        <button class="btn"><a href="#">Accion</a></button>
-        <button class="btn"><a href="#">Animacion</a></button>
-        <button type="button" class="perfil"><a href="#">perfil</a><img id="aw" src="/img/arrow.svg" alt=""></button>
+        <div class="nav__input">
+        <input type="text" name="search" id="srch" placeholder="buscar">
+        <button type="submit">
+            <img src="img/search.svg" alt="">
+        </button>
+        </div>
+        <button class="btn"><a>Peliculas</a></button>
+        <button class="btn"><a>Series</a></button>
+        <button class="btn"><a >Comedia</a></button>
+        <button class="btn"><a>Accion</a></button>
+        <button class="btn"><a>Animacion</a></button>
+        <button type="button" class="perfil"><a>perfil</a><img id="aw" src="/img/arrow.svg" alt=""></button>
     </header>
     <!--NAVEGACION EN WEBSITE-->
     <div class="slider">
@@ -50,7 +55,6 @@ b
     <section class="horarios">
 b
     </section>
-
     <script src="script/script.js"></script>
 </body>
 </html>
