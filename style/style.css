@@ -154,7 +154,12 @@ body {
   font-weight: 600;
   letter-spacing: 2px;
 }
-
+.slider nav{
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  
+}
 
 
 main {
